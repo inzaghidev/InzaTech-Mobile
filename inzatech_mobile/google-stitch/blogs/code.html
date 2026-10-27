@@ -1,0 +1,261 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>InzaTech - Blogs</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed-dim": "#4edea3",
+                      "on-primary-fixed-variant": "#3323cc",
+                      "tertiary-container": "#006e4b",
+                      "on-tertiary-fixed-variant": "#005236",
+                      "on-secondary-container": "#006172",
+                      "surface-dim": "#dcd8e5",
+                      "surface-tint": "#4d44e3",
+                      "secondary": "#00687a",
+                      "on-secondary": "#ffffff",
+                      "primary-container": "#4f46e5",
+                      "on-background": "#1b1b24",
+                      "secondary-container": "#57dffe",
+                      "primary-fixed-dim": "#c3c0ff",
+                      "on-surface-variant": "#464555",
+                      "surface-container-highest": "#e4e1ee",
+                      "surface-container": "#f0ecf9",
+                      "secondary-fixed-dim": "#4cd7f6",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-variant": "#e4e1ee",
+                      "outline": "#777587",
+                      "surface-container-low": "#f5f2ff",
+                      "surface-bright": "#fcf8ff",
+                      "inverse-on-surface": "#f3effc",
+                      "error": "#ba1a1a",
+                      "primary": "#3525cd",
+                      "on-tertiary": "#ffffff",
+                      "secondary-fixed": "#acedff",
+                      "tertiary-fixed": "#6ffbbe",
+                      "on-secondary-fixed-variant": "#004e5c",
+                      "on-primary": "#ffffff",
+                      "surface-container-high": "#eae6f4",
+                      "on-primary-fixed": "#0f0069",
+                      "outline-variant": "#c7c4d8",
+                      "on-tertiary-container": "#67f4b7",
+                      "background": "#fcf8ff",
+                      "inverse-primary": "#c3c0ff",
+                      "surface": "#fcf8ff",
+                      "on-secondary-fixed": "#001f26",
+                      "on-error": "#ffffff",
+                      "primary-fixed": "#e2dfff",
+                      "on-error-container": "#93000a",
+                      "on-primary-container": "#dad7ff",
+                      "tertiary": "#005338",
+                      "error-container": "#ffdad6",
+                      "inverse-surface": "#302f39",
+                      "on-tertiary-fixed": "#002113",
+                      "on-surface": "#1b1b24"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "base": "4px",
+                      "sm": "8px",
+                      "xs": "4px",
+                      "margin-tablet": "24px",
+                      "xl": "32px",
+                      "lg": "24px",
+                      "gutter": "16px",
+                      "md": "16px",
+                      "safe-bottom": "env(safe-area-inset-bottom, 0px)"
+              },
+              "fontFamily": {
+                      "headline-md": ["Inter"],
+                      "body-md": ["Inter"],
+                      "label-lg": ["Inter"],
+                      "title-lg": ["Inter"],
+                      "title-md": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "label-md": ["Inter"],
+                      "display-lg": ["Inter"],
+                      "headline-lg-mobile": ["Inter"],
+                      "headline-lg": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                      "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                      "title-lg": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+                      "title-md": ["16px", {"lineHeight": "24px", "fontWeight": "500"}],
+                      "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                      "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-lg-mobile": ["22px", {"lineHeight": "28px", "fontWeight": "600"}],
+                      "headline-lg": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        body { -webkit-tap-highlight-color: transparent; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col pb-[90px]">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center w-full px-margin-mobile h-16 sticky top-0 z-50 bg-surface/80 backdrop-blur-md shadow-sm transition-all duration-200 ease-in-out md:hidden">
+<button class="text-on-surface-variant hover:bg-surface-container-high/50 p-2 rounded-full transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="grid_view">grid_view</span>
+</button>
+<h1 class="text-title-lg font-title-lg font-bold text-primary tracking-tight">InzaTech</h1>
+<button class="text-on-surface-variant hover:bg-surface-container-high/50 p-2 rounded-full transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="search">search</span>
+</button>
+</header>
+<!-- Desktop Nav (Hidden on Mobile) -->
+<header class="hidden md:flex justify-between items-center w-full px-margin-tablet h-20 sticky top-0 z-50 bg-surface/80 backdrop-blur-md shadow-sm">
+<h1 class="text-display-lg font-display-lg font-bold text-primary">InzaTech</h1>
+<nav class="flex gap-lg">
+<a class="text-title-md font-title-md text-on-surface-variant hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-title-md font-title-md text-on-surface-variant hover:text-primary transition-colors" href="#">Tools</a>
+<a class="text-title-md font-title-md text-on-surface-variant hover:text-primary transition-colors" href="#">Explore</a>
+<a class="text-title-md font-title-md text-primary font-bold border-b-2 border-primary pb-1" href="#">Blogs</a>
+<a class="text-title-md font-title-md text-on-surface-variant hover:text-primary transition-colors" href="#">Profile</a>
+</nav>
+</header>
+<main class="flex-1 flex flex-col w-full max-w-4xl mx-auto px-margin-mobile md:px-margin-tablet py-lg gap-xl">
+<!-- Search & Filter Section -->
+<section class="flex flex-col gap-md">
+<!-- Search Bar -->
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline text-xl">search</span>
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-full py-3 pl-12 pr-4 text-body-lg font-body-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all shadow-[0px_1px_3px_rgba(0,0,0,0.05)] placeholder-outline" placeholder="Search articles, topics..." type="text">
+</div>
+<!-- Chips Container -->
+<div class="flex overflow-x-auto hide-scrollbar gap-sm pb-2 -mx-margin-mobile px-margin-mobile md:mx-0 md:px-0">
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-primary text-on-primary text-label-lg font-label-lg transition-transform active:scale-95 shadow-sm">All Topics</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-surface-container-highest text-on-surface-variant text-label-lg font-label-lg hover:bg-surface-variant transition-colors active:scale-95 border border-transparent">Design</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-surface-container-highest text-on-surface-variant text-label-lg font-label-lg hover:bg-surface-variant transition-colors active:scale-95 border border-transparent">Engineering</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-surface-container-highest text-on-surface-variant text-label-lg font-label-lg hover:bg-surface-variant transition-colors active:scale-95 border border-transparent">AI &amp; ML</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-surface-container-highest text-on-surface-variant text-label-lg font-label-lg hover:bg-surface-variant transition-colors active:scale-95 border border-transparent">Culture</button>
+</div>
+</section>
+<!-- Featured Article -->
+<section class="flex flex-col gap-md">
+<h2 class="text-headline-md font-headline-md text-on-surface">Featured</h2>
+<article class="group relative bg-surface-container-lowest rounded-[24px] overflow-hidden shadow-[0px_1px_3px_rgba(0,0,0,0.05),_0px_10px_15px_-3px_rgba(0,0,0,0.05)] cursor-pointer transform transition-all duration-300 hover:-translate-y-1 active:scale-[0.98]">
+<div class="h-64 md:h-80 w-full relative">
+<img alt="Featured Article Image" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A modern office workspace viewed from a dynamic high angle. The scene features a sleek wooden desk with a glowing high-end laptop, scattered design blueprints, and a steaming cup of artisan coffee. Sunlight streams through large windows casting soft, volumetric shadows across the clean, minimalist interior. The color palette emphasizes warm oak tones, crisp whites, and vibrant emerald green from indoor plants. The mood is highly productive, inspiring, and contemporary." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaB5ysxGR_r_b9IJ_cPgxWlzrdrBpGV-8nUSf8Pb5VkdX3b2f9E1pWRiRJfASOg_f3We4xco1BrAdatXyHBDR1NQi7R3rtHMyXdheJ3JLkaYjKw6uc4z34LLcAHculXxCpgAz0XboKeQamIiuIaVhzkoNDp1hcel667T6aywp9uKbaE7Yn3IVih57DwLiWLaXUS5rf3AObVsFsUeYWoF1GPd4C8WIHTTnYQb4InvioK3EAgadvqV0bAg">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 bg-tertiary/90 backdrop-blur-sm text-on-tertiary rounded-full text-label-md font-label-md">Engineering</span>
+</div>
+<div class="absolute bottom-0 left-0 p-lg w-full">
+<h3 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg-mobile md:font-headline-lg text-white mb-2 line-clamp-2">Building Resilient Distributed Systems at Scale</h3>
+<div class="flex items-center gap-sm text-surface-container-low text-label-lg font-label-lg">
+<span>By Sarah Chen</span>
+<span class="w-1 h-1 rounded-full bg-surface-container-low"></span>
+<span>8 min read</span>
+</div>
+</div>
+</div>
+</article>
+</section>
+<!-- Latest Articles -->
+<section class="flex flex-col gap-md">
+<h2 class="text-headline-md font-headline-md text-on-surface">Latest Articles</h2>
+<div class="flex flex-col gap-md">
+<!-- Article 1 -->
+<article class="flex gap-md p-md bg-surface-container-lowest rounded-[24px] shadow-[0px_1px_3px_rgba(0,0,0,0.05)] hover:shadow-md transition-shadow cursor-pointer active:scale-[0.98]">
+<div class="w-24 h-24 md:w-32 md:h-32 shrink-0 rounded-xl overflow-hidden relative">
+<img alt="Article Thumbnail" class="w-full h-full object-cover" data-alt="A close up shot of a designer's hands actively sketching on a digital tablet using a stylus. The screen displays complex wireframes and UI components in a sleek dark mode. The lighting is focused and cinematic, highlighting the precision of the stylus tip. Surrounding the tablet are subtle elements of a modern creative studio: a blurred color palette swatch and a sleek mechanical keyboard. The overall tone is focused, creative, and highly professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg_PBCs63JXdB13irQ9HBsASGawROC61HU3POgmZcLgAXRAS8pEa_fVbX4nh0HRXE4fWvpu0vPUILLroQY1vUcv39Uko_Wy8XmfU3zIg0J0utMPi567jPNNBvmsTpSr6VjF2uD7MjHJa6kLtVsw1TmEeasJWnJOaLhR9cpGDUXzKKlpgPYZUIRtUjeVHkd9ygWW8ZI4pMOoxOh3zEEQhuvDivEU3Q22keAsbgeFKdRKZ8lgUhiW5VnGQ">
+</div>
+<div class="flex flex-col justify-center gap-1 flex-1">
+<span class="text-primary text-label-md font-label-md uppercase tracking-wider">Design</span>
+<h4 class="text-title-lg font-title-lg text-on-surface line-clamp-2">The Evolution of Minimalist Interfaces in 2024</h4>
+<p class="text-body-md font-body-md text-on-surface-variant line-clamp-1 mt-1">Exploring the shift towards semantic layout structures.</p>
+<div class="text-label-md font-label-md text-outline mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="schedule">schedule</span>
+<span>4 min read</span>
+</div>
+</div>
+</article>
+<!-- Article 2 -->
+<article class="flex gap-md p-md bg-surface-container-lowest rounded-[24px] shadow-[0px_1px_3px_rgba(0,0,0,0.05)] hover:shadow-md transition-shadow cursor-pointer active:scale-[0.98]">
+<div class="w-24 h-24 md:w-32 md:h-32 shrink-0 rounded-xl overflow-hidden relative">
+<img alt="Article Thumbnail" class="w-full h-full object-cover" data-alt="A macro photograph of a dense server rack in a modern data center illuminated by cool blue and vibrant magenta LED lights. The fiber optic cables are neatly organized, reflecting the glowing lights. The depth of field is shallow, blurring the background into abstract technological bokeh. The mood is high-tech, secure, and dynamic, representing the backbone of modern cloud computing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkU38nY-e8ob7Iuv9g6a7WgQM6jDQS9a1PPJwQW6lv8MQame1CtlDYy7ExP1MwMLZX3uYhzjeTq80t-hHzFzFWEP6QXxG2-myM1mU55W2fybBp4Oy3BAZbYipHrz1L0lUxycrYjECzkH1xbhzH-AhIpTEz9F8hmDxXOnWT4qdCaFD3uQDRz5FzLvQkYN6DPuHr8S9w7pcmfbvd6iIRgFd3KLqAT5gOswYTW5twz_AGTGGLGRYeeYAhIQ">
+</div>
+<div class="flex flex-col justify-center gap-1 flex-1">
+<span class="text-secondary text-label-md font-label-md uppercase tracking-wider">AI &amp; ML</span>
+<h4 class="text-title-lg font-title-lg text-on-surface line-clamp-2">Optimizing Inference for Edge Devices</h4>
+<p class="text-body-md font-body-md text-on-surface-variant line-clamp-1 mt-1">Techniques for deploying lightweight models.</p>
+<div class="text-label-md font-label-md text-outline mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="schedule">schedule</span>
+<span>12 min read</span>
+</div>
+</div>
+</article>
+<!-- Article 3 -->
+<article class="flex gap-md p-md bg-surface-container-lowest rounded-[24px] shadow-[0px_1px_3px_rgba(0,0,0,0.05)] hover:shadow-md transition-shadow cursor-pointer active:scale-[0.98]">
+<div class="w-24 h-24 md:w-32 md:h-32 shrink-0 rounded-xl overflow-hidden relative">
+<img alt="Article Thumbnail" class="w-full h-full object-cover" data-alt="A vibrant, abstract digital illustration showing interconnected nodes and pathways forming a complex network structure. The nodes are glowing spheres in varying shades of indigo and teal, set against a pristine, soft white background. The lines connecting them pulsate with subtle digital energy. The aesthetic is modern, clean, and optimistic, illustrating the concept of team collaboration and cultural connectivity in a digital workspace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdkj-2Xup9sg-C7DmeDoBGCpwRIMK6U5jmjQDWEvU88TguwllsSFwXEXHYu5IpqD4yuWipzg6rFEn4HZxTrilrQ2HRtV1Nt4wZcuHtG0H1L6D0nzjkClgeSwKpPfMatofXvUyM3STezQFR4Zd_wf9rJtL9qwG8WUmsc8DAV-IlU-IBhqdRJQL8DblzBEv8GnoGwBAfXc9LYoypx_hZfFBtBW-NoX2gGTHuZkP7TI3C2NTZfrKOczIExw">
+</div>
+<div class="flex flex-col justify-center gap-1 flex-1">
+<span class="text-tertiary text-label-md font-label-md uppercase tracking-wider">Culture</span>
+<h4 class="text-title-lg font-title-lg text-on-surface line-clamp-2">Fostering Innovation in Remote Teams</h4>
+<p class="text-body-md font-body-md text-on-surface-variant line-clamp-1 mt-1">Strategies for asynchronous collaboration.</p>
+<div class="text-label-md font-label-md text-outline mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="schedule">schedule</span>
+<span>6 min read</span>
+</div>
+</div>
+</article>
+</div>
+<button class="mt-4 py-3 px-6 rounded-full border-2 border-primary text-primary text-label-lg font-label-lg font-semibold hover:bg-primary-container/10 transition-colors w-full md:w-auto self-center">
+                Load More Articles
+            </button>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-2 pb-safe-bottom h-[72px] bg-surface/90 backdrop-blur-xl shadow-[0px_-1px_3px_rgba(0,0,0,0.05)] md:hidden rounded-t-xl">
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1.5 hover:opacity-80 group">
+<span class="material-symbols-outlined text-2xl group-active:scale-95 transition-transform" data-icon="home">home</span>
+<span class="text-label-md font-label-md mt-1">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1.5 hover:opacity-80 group">
+<span class="material-symbols-outlined text-2xl group-active:scale-95 transition-transform" data-icon="build_circle">build_circle</span>
+<span class="text-label-md font-label-md mt-1">Tools</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1.5 hover:opacity-80 group">
+<span class="material-symbols-outlined text-2xl group-active:scale-95 transition-transform" data-icon="explore">explore</span>
+<span class="text-label-md font-label-md mt-1">Explore</span>
+</button>
+<!-- Active Tab: Blogs -->
+<button class="flex flex-col items-center justify-center text-primary bg-primary-container/20 rounded-2xl px-4 py-1.5 transition-all scale-95">
+<span class="material-symbols-outlined text-2xl" data-icon="article" data-weight="fill" style="font-variation-settings: 'FILL' 1;">article</span>
+<span class="text-label-md font-label-md font-bold mt-1">Blogs</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1.5 hover:opacity-80 group">
+<span class="material-symbols-outlined text-2xl group-active:scale-95 transition-transform" data-icon="account_circle">account_circle</span>
+<span class="text-label-md font-label-md mt-1">Profile</span>
+</button>
+</nav>
+</body></html>

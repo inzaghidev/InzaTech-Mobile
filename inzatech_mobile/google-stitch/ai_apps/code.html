@@ -1,0 +1,305 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>InzaTech - AI Apps</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#57dffe",
+                        "surface-tint": "#4d44e3",
+                        "inverse-primary": "#c3c0ff",
+                        "inverse-on-surface": "#f3effc",
+                        "on-primary-container": "#dad7ff",
+                        "background": "#fcf8ff",
+                        "on-tertiary-fixed-variant": "#005236",
+                        "surface-bright": "#fcf8ff",
+                        "surface-container-high": "#eae6f4",
+                        "tertiary-container": "#006e4b",
+                        "on-secondary-fixed": "#001f26",
+                        "outline": "#777587",
+                        "on-primary-fixed": "#0f0069",
+                        "secondary-fixed-dim": "#4cd7f6",
+                        "tertiary-fixed-dim": "#4edea3",
+                        "on-surface-variant": "#464555",
+                        "outline-variant": "#c7c4d8",
+                        "surface-dim": "#dcd8e5",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#acedff",
+                        "surface-container-highest": "#e4e1ee",
+                        "surface-variant": "#e4e1ee",
+                        "primary-container": "#4f46e5",
+                        "surface": "#fcf8ff",
+                        "primary": "#3525cd",
+                        "on-primary-fixed-variant": "#3323cc",
+                        "on-tertiary-container": "#67f4b7",
+                        "primary-fixed": "#e2dfff",
+                        "on-background": "#1b1b24",
+                        "on-secondary-container": "#006172",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "on-error": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f5f2ff",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#6ffbbe",
+                        "on-tertiary-fixed": "#002113",
+                        "on-error-container": "#93000a",
+                        "on-surface": "#1b1b24",
+                        "error-container": "#ffdad6",
+                        "error": "#ba1a1a",
+                        "secondary": "#00687a",
+                        "tertiary": "#005338",
+                        "inverse-surface": "#302f39",
+                        "on-secondary-fixed-variant": "#004e5c",
+                        "surface-container": "#f0ecf9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "16px",
+                        "margin-mobile": "16px",
+                        "xs": "4px",
+                        "margin-tablet": "24px",
+                        "md": "16px",
+                        "sm": "8px",
+                        "lg": "24px",
+                        "base": "4px",
+                        "xl": "32px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "title-md": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "500" }],
+                        "title-lg": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["22px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            -webkit-tap-highlight-color: transparent;
+        }
+        .safe-bottom {
+            padding-bottom: env(safe-area-inset-bottom, 24px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-surface/80 dark:bg-surface-container-low/80 backdrop-blur-md shadow-sm dark:shadow-none flex justify-between items-center w-full px-margin-mobile h-16 sticky top-0 z-50">
+<button class="p-2 -ml-2 rounded-full hover:bg-surface-container-high/50 text-primary transition-all duration-200">
+<span class="material-symbols-outlined">grid_view</span>
+</button>
+<h1 class="text-title-lg font-title-lg font-bold text-primary">InzaTech</h1>
+<button class="p-2 -mr-2 rounded-full hover:bg-surface-container-high/50 text-primary transition-all duration-200">
+<span class="material-symbols-outlined">search</span>
+</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 flex flex-col px-margin-mobile pt-lg pb-[96px] gap-lg">
+<!-- Header Text -->
+<div class="flex flex-col gap-xs">
+<h2 class="text-headline-lg-mobile font-headline-lg-mobile text-on-surface font-bold">Tools and AI</h2>
+<p class="text-body-md font-body-md text-on-surface-variant">Explore our collection of smart utilities and Gemini-powered applications designed to enhance your productivity.</p>
+</div>
+<!-- Segmented Control -->
+<div class="bg-[#F1F5F9] p-1 rounded-lg flex w-full relative">
+<button class="flex-1 py-2 text-label-lg font-label-lg text-on-surface-variant rounded-md transition-colors z-10">Utilities</button>
+<button class="flex-1 py-2 text-label-lg font-label-lg text-primary-container bg-surface-container-lowest shadow-[0px_1px_3px_rgba(0,0,0,0.05),0px_10px_15px_-3px_rgba(0,0,0,0.05)] rounded-md transition-all z-10 font-bold">AI Apps</button>
+</div>
+<!-- Bento Grid / Cards -->
+<div class="flex flex-col gap-md"><section class="flex flex-col gap-md mb-2">
+  <h3 class="text-headline-lg-mobile font-headline-lg-mobile text-on-surface font-bold px-1">AI Apps</h3>
+  <div class="flex flex-col gap-md">
+    <!-- AI Chatbot -->
+    <div class="bg-surface-container-lowest rounded-[24px] p-lg shadow-sm border border-outline-variant/30 flex items-center gap-lg">
+      <div class="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center shrink-0">
+        <span class="material-symbols-outlined text-on-primary text-3xl">smart_toy</span>
+      </div>
+      <div class="flex flex-col">
+        <h4 class="text-title-lg font-bold text-on-surface">AI Chatbot</h4>
+        <p class="text-body-md text-on-surface-variant">Advanced conversational assistant</p>
+      </div>
+    </div>
+    <!-- AI Writer -->
+    <div class="bg-surface-container-lowest rounded-[24px] p-lg shadow-sm border border-outline-variant/30 flex items-center gap-lg">
+      <div class="w-16 h-16 bg-secondary rounded-2xl flex items-center justify-center shrink-0">
+        <span class="material-symbols-outlined text-on-secondary text-3xl">history_edu</span>
+      </div>
+      <div class="flex flex-col">
+        <h4 class="text-title-lg font-bold text-on-surface">AI Writer</h4>
+        <p class="text-body-md text-on-surface-variant">Content generation and rewriting</p>
+      </div>
+    </div>
+    <!-- AI Code Generator -->
+    <div class="bg-surface-container-lowest rounded-[24px] p-lg shadow-sm border border-outline-variant/30 flex items-center gap-lg">
+      <div class="w-16 h-16 bg-tertiary rounded-2xl flex items-center justify-center shrink-0">
+        <span class="material-symbols-outlined text-on-tertiary text-3xl">code_blocks</span>
+      </div>
+      <div class="flex flex-col">
+        <h4 class="text-title-lg font-bold text-on-surface">AI Code Generator</h4>
+        <p class="text-body-md text-on-surface-variant">Write, review, and debug code</p>
+      </div>
+    </div>
+    <!-- Bottom Row Grid -->
+    <div class="grid grid-cols-2 gap-md">
+      <div class="bg-surface-container-lowest rounded-[24px] p-lg shadow-sm border border-outline-variant/30 flex flex-col gap-md">
+        <div class="w-12 h-12 bg-error-container rounded-2xl flex items-center justify-center">
+          <span class="material-symbols-outlined text-error text-2xl">image</span>
+        </div>
+        <h4 class="text-title-md font-bold text-on-surface leading-tight">AI Image Generator</h4>
+      </div>
+      <div class="bg-surface-container-lowest rounded-[24px] p-lg shadow-sm border border-outline-variant/30 flex flex-col gap-md">
+        <div class="w-12 h-12 bg-surface-container-high rounded-2xl flex items-center justify-center">
+          <span class="material-symbols-outlined text-on-surface-variant text-2xl">library_books</span>
+        </div>
+        <h4 class="text-title-md font-bold text-on-surface leading-tight">AI Prompt Library</h4>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Section 1: Content Creation -->
+<section class="bg-surface-container-lowest rounded-[24px] p-lg shadow-[0px_1px_3px_rgba(0,0,0,0.05),0px_10px_15px_-3px_rgba(0,0,0,0.05)] flex flex-col gap-md border border-outline-variant/30">
+<div class="flex justify-between items-center">
+<h3 class="text-title-lg font-title-lg text-on-surface font-semibold">Content Creation</h3>
+<span class="material-symbols-outlined text-outline">edit_document</span>
+</div>
+<div class="grid grid-cols-4 gap-sm">
+<button class="flex flex-col items-center justify-center gap-1 bg-primary-fixed/50 hover:bg-primary-fixed p-2 rounded-xl transition-transform active:scale-[0.98] h-[72px]">
+<span class="material-symbols-outlined text-primary-container">smart_toy</span>
+<span class="text-[10px] font-label-md text-on-surface-variant leading-tight">Chatbot</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 bg-primary-fixed/50 hover:bg-primary-fixed p-2 rounded-xl transition-transform active:scale-[0.98] h-[72px]">
+<span class="material-symbols-outlined text-primary-container">history_edu</span>
+<span class="text-[10px] font-label-md text-on-surface-variant leading-tight">Writer</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 bg-primary-fixed/50 hover:bg-primary-fixed p-2 rounded-xl transition-transform active:scale-[0.98] h-[72px]">
+<span class="material-symbols-outlined text-primary-container">image</span>
+<span class="text-[10px] font-label-md text-on-surface-variant leading-tight text-center">Image Gen</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 bg-primary-fixed/50 hover:bg-primary-fixed p-2 rounded-xl transition-transform active:scale-[0.98] h-[72px]">
+<span class="material-symbols-outlined text-primary-container">movie</span>
+<span class="text-[10px] font-label-md text-on-surface-variant leading-tight text-center">Video</span>
+</button>
+</div>
+<div class="flex justify-end mt-2">
+<button class="bg-primary-fixed/50 hover:bg-primary-fixed text-primary-container px-4 py-1.5 rounded-full text-label-md font-label-md flex items-center gap-1 transition-colors">
+                        View All <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+</section>
+<!-- Section 2: Development -->
+<section class="bg-surface-container-lowest rounded-[24px] p-lg shadow-[0px_1px_3px_rgba(0,0,0,0.05),0px_10px_15px_-3px_rgba(0,0,0,0.05)] flex flex-col gap-md border border-outline-variant/30">
+<div class="flex justify-between items-center">
+<h3 class="text-title-lg font-title-lg text-on-surface font-semibold">Development</h3>
+<span class="material-symbols-outlined text-outline">terminal</span>
+</div>
+<div class="grid grid-cols-4 gap-sm">
+<button class="flex flex-col items-center justify-center gap-1 bg-primary-fixed/50 hover:bg-primary-fixed p-2 rounded-xl transition-transform active:scale-[0.98] h-[72px]">
+<span class="material-symbols-outlined text-primary-container">code_blocks</span>
+<span class="text-[10px] font-label-md text-on-surface-variant leading-tight text-center">Code Gen</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 bg-primary-fixed/50 hover:bg-primary-fixed p-2 rounded-xl transition-transform active:scale-[0.98] h-[72px]">
+<span class="material-symbols-outlined text-primary-container">bug_report</span>
+<span class="text-[10px] font-label-md text-on-surface-variant leading-tight text-center">Debugger</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 bg-primary-fixed/50 hover:bg-primary-fixed p-2 rounded-xl transition-transform active:scale-[0.98] h-[72px]">
+<span class="material-symbols-outlined text-primary-container">api</span>
+<span class="text-[10px] font-label-md text-on-surface-variant leading-tight text-center">API Asst</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 bg-primary-fixed/50 hover:bg-primary-fixed p-2 rounded-xl transition-transform active:scale-[0.98] h-[72px]">
+<span class="material-symbols-outlined text-primary-container">science</span>
+<span class="text-[10px] font-label-md text-on-surface-variant leading-tight">Tester</span>
+</button>
+</div>
+<div class="flex justify-end mt-2">
+<button class="bg-primary-fixed/50 hover:bg-primary-fixed text-primary-container px-4 py-1.5 rounded-full text-label-md font-label-md flex items-center gap-1 transition-colors">
+                        View All <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+</section>
+<!-- Section 3: Research -->
+<section class="bg-surface-container-lowest rounded-[24px] p-lg shadow-[0px_1px_3px_rgba(0,0,0,0.05),0px_10px_15px_-3px_rgba(0,0,0,0.05)] flex flex-col gap-md border border-outline-variant/30">
+<div class="flex justify-between items-center">
+<h3 class="text-title-lg font-title-lg text-on-surface font-semibold">Research</h3>
+<span class="material-symbols-outlined text-outline">search_insights</span>
+</div>
+<div class="grid grid-cols-4 gap-sm">
+<button class="flex flex-col items-center justify-center gap-1 bg-primary-fixed/50 hover:bg-primary-fixed p-2 rounded-xl transition-transform active:scale-[0.98] h-[72px]">
+<span class="material-symbols-outlined text-primary-container">library_books</span>
+<span class="text-[10px] font-label-md text-on-surface-variant leading-tight text-center">Prompt Lib</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 bg-primary-fixed/50 hover:bg-primary-fixed p-2 rounded-xl transition-transform active:scale-[0.98] h-[72px]">
+<span class="material-symbols-outlined text-primary-container">format_align_center</span>
+<span class="text-[10px] font-label-md text-on-surface-variant leading-tight text-center">Summarizer</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 bg-primary-fixed/50 hover:bg-primary-fixed p-2 rounded-xl transition-transform active:scale-[0.98] h-[72px]">
+<span class="material-symbols-outlined text-primary-container">person_search</span>
+<span class="text-[10px] font-label-md text-on-surface-variant leading-tight text-center">Research</span>
+</button>
+<div class="col-span-1"></div> <!-- Empty space for grid alignment -->
+</div>
+<div class="flex justify-end mt-2">
+<button class="bg-primary-fixed/50 hover:bg-primary-fixed text-primary-container px-4 py-1.5 rounded-full text-label-md font-label-md flex items-center gap-1 transition-colors">
+                        View All <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+</section>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-2 pb-safe-bottom h-[72px] bg-surface/90 dark:bg-surface-container/90 backdrop-blur-xl shadow-[0px_-1px_3px_rgba(0,0,0,0.05)] md:hidden">
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-4 py-1.5 hover:opacity-80">
+<span class="material-symbols-outlined text-2xl">home</span>
+<span class="text-label-md font-label-md mt-1">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-primary dark:text-tertiary-fixed-dim bg-primary-container/20 dark:bg-tertiary-container/30 rounded-2xl px-4 py-1.5 transition-all scale-95 hover:opacity-80">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">build_circle</span>
+<span class="text-label-md font-label-md mt-1 font-bold">Tools</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-4 py-1.5 hover:opacity-80">
+<span class="material-symbols-outlined text-2xl">explore</span>
+<span class="text-label-md font-label-md mt-1">Explore</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-4 py-1.5 hover:opacity-80">
+<span class="material-symbols-outlined text-2xl">article</span>
+<span class="text-label-md font-label-md mt-1">Blogs</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-4 py-1.5 hover:opacity-80">
+<span class="material-symbols-outlined text-2xl">account_circle</span>
+<span class="text-label-md font-label-md mt-1">Profile</span>
+</button>
+</nav>
+
+
+</body></html>

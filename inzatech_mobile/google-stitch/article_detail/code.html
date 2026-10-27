@@ -1,0 +1,215 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>InzaTech - Article</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#4edea3",
+                        "on-primary-fixed-variant": "#3323cc",
+                        "tertiary-container": "#006e4b",
+                        "on-tertiary-fixed-variant": "#005236",
+                        "on-secondary-container": "#006172",
+                        "surface-dim": "#dcd8e5",
+                        "surface-tint": "#4d44e3",
+                        "secondary": "#00687a",
+                        "on-secondary": "#ffffff",
+                        "primary-container": "#4f46e5",
+                        "on-background": "#1b1b24",
+                        "secondary-container": "#57dffe",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "on-surface-variant": "#464555",
+                        "surface-container-highest": "#e4e1ee",
+                        "surface-container": "#f0ecf9",
+                        "secondary-fixed-dim": "#4cd7f6",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#e4e1ee",
+                        "outline": "#777587",
+                        "surface-container-low": "#f5f2ff",
+                        "surface-bright": "#fcf8ff",
+                        "inverse-on-surface": "#f3effc",
+                        "error": "#ba1a1a",
+                        "primary": "#3525cd",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed": "#acedff",
+                        "tertiary-fixed": "#6ffbbe",
+                        "on-secondary-fixed-variant": "#004e5c",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#eae6f4",
+                        "on-primary-fixed": "#0f0069",
+                        "outline-variant": "#c7c4d8",
+                        "on-tertiary-container": "#67f4b7",
+                        "background": "#fcf8ff",
+                        "inverse-primary": "#c3c0ff",
+                        "surface": "#fcf8ff",
+                        "on-secondary-fixed": "#001f26",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#e2dfff",
+                        "on-error-container": "#93000a",
+                        "on-primary-container": "#dad7ff",
+                        "tertiary": "#005338",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#302f39",
+                        "on-tertiary-fixed": "#002113",
+                        "on-surface": "#1b1b24"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "base": "4px",
+                        "sm": "8px",
+                        "xs": "4px",
+                        "margin-tablet": "24px",
+                        "xl": "32px",
+                        "lg": "24px",
+                        "gutter": "16px",
+                        "md": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "title-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "headline-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "title-lg": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+                        "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "500" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["22px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { -webkit-tap-highlight-color: transparent; }
+        .prose p { margin-bottom: 1.25rem; }
+        .pb-safe-bottom { padding-bottom: env(safe-area-inset-bottom, 16px); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface antialiased flex flex-col min-h-screen">
+<!-- Top App Bar -->
+<header class="flex justify-between items-center w-full px-margin-mobile h-16 sticky top-0 z-50 bg-surface/80 dark:bg-surface-container-low/80 backdrop-blur-md shadow-sm dark:shadow-none transition-all duration-200 ease-in-out">
+<button aria-label="Go back" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-high/50 dark:hover:bg-surface-container-highest/20 text-on-surface-variant dark:text-outline-variant">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<div class="text-title-lg font-title-lg font-bold text-primary dark:text-primary-fixed-dim">InzaTech</div>
+<button aria-label="Share article" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-high/50 dark:hover:bg-surface-container-highest/20 text-on-surface-variant dark:text-outline-variant">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pb-32">
+<!-- Hero Image -->
+<div class="w-full aspect-video bg-surface-container relative overflow-hidden">
+<img alt="Article Hero Image" class="w-full h-full object-cover" data-alt="A futuristic data center interior illuminated by cool blue and purple LED lights, creating a modern, minimalist high-tech aesthetic suitable for a premium SaaS platform. The composition is sleek and abstract, focusing on servers and glowing fiber optic cables." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbjOZBq45sLzx0u29AXqSUOdDECZwUkiFIzUrUgX_JwCO7l2lYzfnmB00oRUG6yC5tcKORa9cJzjWBeadFATF_3lnFd_ZXuLFjfu_iU9nLpgBbMuEsaZjTK4avw574EKzNnEwpR6kzRkzU_THuTZyETr9JqmWA7suewzbQHBMH-ezQM67MpXjo_y0aHuy9sa-jRBckDZDacF_hyt_-dFae3TEgBrZiSudEB8CTjQeQDUTl_yM5Qv4R0g">
+</div>
+<!-- Article Header -->
+<article class="px-margin-mobile pt-lg pb-md bg-surface">
+<div class="flex items-center gap-2 mb-sm">
+<span class="px-2 py-1 rounded-full bg-primary/10 text-primary font-label-md text-label-md">Engineering</span>
+<span class="text-on-surface-variant font-label-md text-label-md">5 min read</span>
+</div>
+<h1 class="text-display-lg font-display-lg mb-md text-on-surface">Scaling Microservices for Global Reach</h1>
+<div class="flex items-center gap-sm mb-lg">
+<div class="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden">
+<img alt="Author Avatar" class="w-full h-full object-cover" data-alt="A professional headshot of a software engineer in a modern, brightly lit office environment. The lighting is soft and flattering, reflecting a clean, approachable, and premium SaaS corporate culture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsO_zhFwmtbQ_mssg9er0IEOD1XCFW848e2GNBsKqx1Cj9zDAbZycP-T61HfBHHG8MAcad3dFviAnHg-3H0erwKTdtoYmsq81QEmHXdgxzBg78jUF_q9Xgf7UVserU9VneDR0qsgST0t8fmzK-NYhaTB2f_bVwcRVAtk7SS_YHOrc2psLwJfuY4Gczg7oxA7xPEzAol8U6mXbmVKfWebEabt-FJbsYbC-sHKSpwqRWjY1CxIQwhcmUhg">
+</div>
+<div>
+<p class="font-title-md text-title-md text-on-surface">Alex Mercer</p>
+<p class="font-label-md text-label-md text-on-surface-variant">Oct 24, 2023</p>
+</div>
+</div>
+<!-- Rich Text Content -->
+<div class="prose font-body-lg text-body-lg text-on-surface-variant">
+<p>As platforms grow, the monolithic architectures of the past often become bottlenecks. Transitioning to a microservices architecture is a common evolutionary step for modern SaaS applications seeking global scalability and high availability.</p>
+<h2 class="text-headline-md font-headline-md text-on-surface mt-xl mb-md">The Architectural Shift</h2>
+<p>Breaking down a massive application into smaller, independent services allows specialized teams to develop, deploy, and scale components autonomously. This decoupling is essential for maintaining agility in a fast-paced market.</p>
+<div class="my-lg p-md bg-surface-container rounded-xl border border-surface-variant">
+<p class="font-body-md text-body-md italic">"Microservices aren't just a technical solution; they represent a fundamental shift in how engineering organizations operate and communicate."</p>
+</div>
+<p>However, this transition introduces new complexities, particularly around inter-service communication, data consistency, and distributed tracing. Implementing robust API gateways and service meshes becomes critical infrastructure rather than optional enhancements.</p>
+</div>
+</article>
+<!-- Related Articles Section -->
+<section class="px-margin-mobile py-xl bg-surface-container-lowest mt-sm">
+<h3 class="text-headline-md font-headline-md mb-lg text-on-surface">Related Articles</h3>
+<div class="grid grid-cols-1 gap-md">
+<!-- Related Article Card 1 -->
+<a class="flex gap-md p-md rounded-xl bg-surface shadow-sm border border-surface-variant hover:bg-surface-container-lowest transition-colors active:scale-95 duration-200" href="#">
+<div class="w-24 h-24 rounded-lg bg-surface-container overflow-hidden shrink-0">
+<img alt="Related Article 1" class="w-full h-full object-cover" data-alt="Abstract representation of cloud computing, featuring soft, glowing white nodes connected by thin blue lines against a pristine light-mode background, symbolizing seamless data transfer and connectivity in a modern IT infrastructure." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDz7vKkV8QX8NGpgov7b3DPU8uwmjV5_kIWqY8RQXNrnbeSVATx-TbFONdQRCAmRnTNKR8w4xvB-Kl0E7yPZ5ctJ816ieaNbqPzMS-lDcBoErtTrBhWk-9CCrOrQFyt5OkxIO8vR6EHwYuCtbAj5jRKD0ouTn9kk2uLUvBX3Cfw6Olvv9cfHkqzYZNKu6klwjhU5z-Mm7vkBGtmZmp6NztbwmY8P-Fic8eFGEwd163FA8ca3OFCi8B2ZA">
+</div>
+<div class="flex flex-col justify-center">
+<span class="text-primary font-label-md text-label-md mb-1">Infrastructure</span>
+<h4 class="font-title-md text-title-md text-on-surface line-clamp-2">Optimizing Cloud Costs in 2024</h4>
+<p class="font-label-md text-label-md text-on-surface-variant mt-2">3 min read</p>
+</div>
+</a>
+<!-- Related Article Card 2 -->
+<a class="flex gap-md p-md rounded-xl bg-surface shadow-sm border border-surface-variant hover:bg-surface-container-lowest transition-colors active:scale-95 duration-200" href="#">
+<div class="w-24 h-24 rounded-lg bg-surface-container overflow-hidden shrink-0">
+<img alt="Related Article 2" class="w-full h-full object-cover" data-alt="A clean, minimalist workspace featuring a sleek laptop displaying lines of code, a cup of coffee, and a notebook on a light oak desk. The lighting is natural and bright, conveying productivity and modern software development." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtoTC6czn6hj96LIvv5w08ouFQe1gA2VWBsYQhSahXfm8AsRvS2SlAm4G8z3OTLIsTIjlPRXLiKGKjqKAdK8Fd53YRkp4xccgQxbLDi7iEWjK9MSgcqdy1_Lrr09Koowds95KOLxOIpyX2LCKgfHaAh0Y06JXC0p3eHwAdoZ8ZDrCqeAs9pHfSGvYmT_ZZO0NvUY0TTqLdSuCmMRf9X2ymzWFART7EGNbXFuZukBBTmIpxxVi9fvM6AQ">
+</div>
+<div class="flex flex-col justify-center">
+<span class="text-primary font-label-md text-label-md mb-1">Development</span>
+<h4 class="font-title-md text-title-md text-on-surface line-clamp-2">State Management Patterns</h4>
+<p class="font-label-md text-label-md text-on-surface-variant mt-2">7 min read</p>
+</div>
+</a>
+</div>
+</section>
+</main>
+<!-- Bottom Nav Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-2 pb-safe-bottom h-[72px] bg-surface/90 dark:bg-surface-container/90 backdrop-blur-xl shadow-[0px_-1px_3px_rgba(0,0,0,0.05)] rounded-t-xl md:hidden">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-4 py-1.5 hover:opacity-80" href="#">
+<span class="material-symbols-outlined text-2xl mb-1" data-icon="home">home</span>
+<span class="text-label-md font-label-md">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-4 py-1.5 hover:opacity-80" href="#">
+<span class="material-symbols-outlined text-2xl mb-1" data-icon="build_circle">build_circle</span>
+<span class="text-label-md font-label-md">Tools</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-4 py-1.5 hover:opacity-80" href="#">
+<span class="material-symbols-outlined text-2xl mb-1" data-icon="explore">explore</span>
+<span class="text-label-md font-label-md">Explore</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary dark:text-tertiary-fixed-dim bg-primary-container/20 dark:bg-tertiary-container/30 rounded-2xl px-4 py-1.5 transition-all scale-95 duration-150" href="#">
+<span class="material-symbols-outlined text-2xl mb-1" data-icon="article" data-weight="fill" style="font-variation-settings: 'FILL' 1;">article</span>
+<span class="text-label-md font-label-md font-bold">Blogs</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-4 py-1.5 hover:opacity-80" href="#">
+<span class="material-symbols-outlined text-2xl mb-1" data-icon="account_circle">account_circle</span>
+<span class="text-label-md font-label-md">Profile</span>
+</a>
+</nav>
+</body></html>

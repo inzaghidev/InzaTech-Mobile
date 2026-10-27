@@ -1,0 +1,361 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport">
+<title>InzaTech - Home</title>
+<!-- Google Fonts & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#4edea3",
+                        "on-primary-fixed-variant": "#3323cc",
+                        "tertiary-container": "#006e4b",
+                        "on-tertiary-fixed-variant": "#005236",
+                        "on-secondary-container": "#006172",
+                        "surface-dim": "#dcd8e5",
+                        "surface-tint": "#4d44e3",
+                        "secondary": "#00687a",
+                        "on-secondary": "#ffffff",
+                        "primary-container": "#4f46e5",
+                        "on-background": "#1b1b24",
+                        "secondary-container": "#57dffe",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "on-surface-variant": "#464555",
+                        "surface-container-highest": "#e4e1ee",
+                        "surface-container": "#f0ecf9",
+                        "secondary-fixed-dim": "#4cd7f6",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#e4e1ee",
+                        "outline": "#777587",
+                        "surface-container-low": "#f5f2ff",
+                        "surface-bright": "#fcf8ff",
+                        "inverse-on-surface": "#f3effc",
+                        "error": "#ba1a1a",
+                        "primary": "#3525cd",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed": "#acedff",
+                        "tertiary-fixed": "#6ffbbe",
+                        "on-secondary-fixed-variant": "#004e5c",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#eae6f4",
+                        "on-primary-fixed": "#0f0069",
+                        "outline-variant": "#c7c4d8",
+                        "on-tertiary-container": "#67f4b7",
+                        "background": "#fcf8ff",
+                        "inverse-primary": "#c3c0ff",
+                        "surface": "#fcf8ff",
+                        "on-secondary-fixed": "#001f26",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#e2dfff",
+                        "on-error-container": "#93000a",
+                        "on-primary-container": "#dad7ff",
+                        "tertiary": "#005338",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#302f39",
+                        "on-tertiary-fixed": "#002113",
+                        "on-surface": "#1b1b24"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.5rem",
+                        "xl": "0.5rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "base": "4px",
+                        "sm": "8px",
+                        "xs": "4px",
+                        "margin-tablet": "24px",
+                        "xl": "32px",
+                        "lg": "24px",
+                        "gutter": "16px",
+                        "md": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "title-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "headline-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "title-lg": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+                        "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "500" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["22px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .no-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .no-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            .pb-safe-bottom {
+                padding-bottom: env(safe-area-inset-bottom);
+            }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background min-h-screen font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center w-full px-margin-mobile h-16 sticky top-0 z-50 bg-surface/80 dark:bg-surface-container-low/80 backdrop-blur-md shadow-sm dark:shadow-none transition-all duration-200 ease-in-out">
+<button aria-label="Menu" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-high/50 dark:hover:bg-surface-container-highest/20 text-on-surface-variant dark:text-outline-variant transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="grid_view">grid_view</span>
+</button>
+<h1 class="text-title-lg font-title-lg text-primary dark:text-primary-fixed-dim tracking-tight">InzaTech</h1>
+<button aria-label="Search" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-high/50 dark:hover:bg-surface-container-highest/20 text-on-surface-variant dark:text-outline-variant transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="search">search</span>
+</button>
+</header>
+<!-- Main Content Area -->
+<main class="pb-[96px] pt-4 flex flex-col gap-8 w-full max-w-3xl mx-auto">
+<!-- Search Section -->
+<section class="px-margin-mobile">
+<div class="relative w-full group">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline-variant group-focus-within:text-primary transition-colors">search</span>
+</div>
+<input class="block w-full pl-11 pr-4 py-3.5 bg-surface-container-lowest border border-surface-variant rounded-xl text-body-lg text-on-surface placeholder:text-outline-variant focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all shadow-[0px_1px_3px_rgba(0,0,0,0.05),_0px_10px_15px_-3px_rgba(0,0,0,0.05)]" placeholder="Search tools, AI, blogs..." type="text">
+</div>
+</section>
+<!-- Widgets Section -->
+<section>
+<div class="px-margin-mobile flex justify-between items-end mb-4">
+<h2 class="text-headline-md font-headline-md text-on-surface">At a Glance</h2>
+</div>
+<div class="flex overflow-x-auto no-scrollbar px-margin-mobile pb-4 pt-1 snap-x snap-mandatory gap-4">
+<!-- Clock Widget -->
+<div class="flex-shrink-0 w-[240px] p-5 bg-gradient-to-br from-primary-container to-primary rounded-xl shadow-[0px_1px_3px_rgba(0,0,0,0.05),_0px_10px_15px_-3px_rgba(0,0,0,0.05)] snap-center text-on-primary">
+<div class="flex items-center gap-2 mb-2 opacity-80">
+<span class="material-symbols-outlined text-[20px]">schedule</span>
+<span class="text-label-md font-label-md uppercase tracking-wider">Local Time</span>
+</div>
+<div class="text-[40px] font-bold leading-none mb-1">10:42</div>
+<div class="text-title-md font-title-md opacity-90">AM PST</div>
+</div>
+<!-- Weather Widget -->
+<div class="flex-shrink-0 w-[240px] p-5 bg-gradient-to-br from-secondary-container to-secondary rounded-xl shadow-[0px_1px_3px_rgba(0,0,0,0.05),_0px_10px_15px_-3px_rgba(0,0,0,0.05)] snap-center text-on-secondary-container">
+<div class="flex items-center gap-2 mb-2 opacity-80">
+<span class="material-symbols-outlined text-[20px]">partly_cloudy_day</span>
+<span class="text-label-md font-label-md uppercase tracking-wider">San Francisco</span>
+</div>
+<div class="flex items-end gap-2 mb-1">
+<div class="text-[40px] font-bold leading-none">68°</div>
+</div>
+<div class="text-title-md font-title-md opacity-90">Partly Cloudy</div>
+</div>
+</div>
+</section>
+<!-- AI Apps Section -->
+<section class="px-margin-mobile">
+<div class="flex justify-between items-end mb-4">
+<h2 class="text-headline-md font-headline-md text-on-surface">AI Apps</h2>
+<button class="text-label-lg font-label-lg text-primary hover:text-on-primary-fixed-variant transition-colors">See all</button>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<!-- Chatbot -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-[0px_1px_3px_rgba(0,0,0,0.05),_0px_10px_15px_-3px_rgba(0,0,0,0.05)] flex flex-col items-start gap-4 active:scale-[0.98] transition-transform cursor-pointer group">
+<div class="w-14 h-14 rounded-xl bg-primary-container/20 flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-primary text-[32px]" data-icon="smart_toy" data-weight="fill" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+<div>
+<h3 class="text-title-lg font-title-lg text-on-surface mb-1 group-hover:text-primary transition-colors">AI Chatbot</h3>
+<p class="text-label-md font-label-md text-on-surface-variant">AI Assistant</p>
+</div>
+</div>
+<!-- Code Generator -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-[0px_1px_3px_rgba(0,0,0,0.05),_0px_10px_15px_-3px_rgba(0,0,0,0.05)] flex flex-col items-start gap-4 active:scale-[0.98] transition-transform cursor-pointer group">
+<div class="w-14 h-14 rounded-xl bg-secondary-container/20 flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-secondary text-[32px]" data-icon="code" data-weight="fill" style="font-variation-settings: 'FILL' 1;">code</span>
+</div>
+<div>
+<h3 class="text-title-lg font-title-lg text-on-surface mb-1 group-hover:text-secondary transition-colors">AI Code Generator</h3>
+<p class="text-label-md font-label-md text-on-surface-variant">Dev Copilot</p>
+</div>
+</div>
+<!-- Image Generator -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-[0px_1px_3px_rgba(0,0,0,0.05),_0px_10px_15px_-3px_rgba(0,0,0,0.05)] flex flex-col items-start gap-4 active:scale-[0.98] transition-transform cursor-pointer group">
+<div class="w-14 h-14 rounded-xl bg-tertiary-container/20 flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-tertiary text-[32px]" data-icon="image" data-weight="fill" style="font-variation-settings: 'FILL' 1;">image</span>
+</div>
+<div>
+<h3 class="text-title-lg font-title-lg text-on-surface mb-1 group-hover:text-tertiary transition-colors">AI Image Generator</h3>
+<p class="text-label-md font-label-md text-on-surface-variant">Image Gen</p>
+</div>
+</div>
+<!-- Writer -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-[0px_1px_3px_rgba(0,0,0,0.05),_0px_10px_15px_-3px_rgba(0,0,0,0.05)] flex flex-col items-start gap-4 active:scale-[0.98] transition-transform cursor-pointer group">
+<div class="w-14 h-14 rounded-xl bg-error-container/20 flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-error text-[32px]" data-icon="edit_document" data-weight="fill" style="font-variation-settings: 'FILL' 1;">edit_document</span>
+</div>
+<div>
+<h3 class="text-title-lg font-title-lg text-on-surface mb-1 group-hover:text-error transition-colors">AI Writer</h3>
+<p class="text-label-md font-label-md text-on-surface-variant">Content Creator</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Utilities Section -->
+<section>
+<div class="px-margin-mobile flex justify-between items-end mb-4">
+<h2 class="text-headline-md font-headline-md text-on-surface">Quick Utilities</h2>
+<button class="text-label-lg font-label-lg text-primary hover:text-on-primary-fixed-variant transition-colors">See all</button>
+</div>
+<div class="flex overflow-x-auto no-scrollbar px-margin-mobile pb-4 pt-1 snap-x snap-mandatory gap-4">
+<!-- Common -->
+<button class="flex-shrink-0 w-[100px] flex flex-col items-center p-3 bg-surface-container-lowest rounded-xl shadow-[0px_1px_3px_rgba(0,0,0,0.05),_0px_10px_15px_-3px_rgba(0,0,0,0.05)] snap-center active:scale-[0.98] transition-transform group">
+<div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center mb-2 group-hover:bg-outline-variant transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant text-[24px]" data-icon="square_foot">square_foot</span>
+</div>
+<span class="text-label-md font-label-md text-on-surface text-center">Common</span>
+</button>
+<!-- Engine -->
+<button class="flex-shrink-0 w-[100px] flex flex-col items-center p-3 bg-surface-container-lowest rounded-xl shadow-[0px_1px_3px_rgba(0,0,0,0.05),_0px_10px_15px_-3px_rgba(0,0,0,0.05)] snap-center active:scale-[0.98] transition-transform group">
+<div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center mb-2 group-hover:bg-outline-variant transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant text-[24px]" data-icon="settings_applications">settings_applications</span>
+</div>
+<span class="text-label-md font-label-md text-on-surface text-center">Engine</span>
+</button>
+<!-- Electric -->
+<button class="flex-shrink-0 w-[100px] flex flex-col items-center p-3 bg-surface-container-lowest rounded-xl shadow-[0px_1px_3px_rgba(0,0,0,0.05),_0px_10px_15px_-3px_rgba(0,0,0,0.05)] snap-center active:scale-[0.98] transition-transform group">
+<div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center mb-2 group-hover:bg-outline-variant transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant text-[24px]" data-icon="electrical_services">electrical_services</span>
+</div>
+<span class="text-label-md font-label-md text-on-surface text-center">Electric</span>
+</button>
+</div>
+</section>
+<!-- Blog Posts Section -->
+<section class="px-margin-mobile">
+<div class="flex justify-between items-end mb-4">
+<h2 class="text-headline-md font-headline-md text-on-surface">Latest from Blog</h2>
+<button class="text-label-lg font-label-lg text-primary hover:text-on-primary-fixed-variant transition-colors">See all</button>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Article 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-[0px_1px_3px_rgba(0,0,0,0.05),_0px_10px_15px_-3px_rgba(0,0,0,0.05)] flex gap-4 cursor-pointer group">
+<div class="w-24 h-24 rounded-xl bg-surface-variant flex-shrink-0 overflow-hidden">
+<img alt="AI Article" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ8iygSeoxlk3ScG1ku5Yb-R54fdtTORIb7ZH5coCmVKFhki9EONCGsF2yyxTuVHfBBKXLVuwtTzpmEekZkrnaDoej_M-2JV02Yr6oza7SsxOOmS6Es65AQbNUfUjpN9eIfW27wBkmOus6B0L0kNb_ZpFe9iouj1kE8AN-Uhg5D9d46t2htsKBLso5P3sVn1oY206fqUVrylXg82D45UIf2nguxpNXtSKAx-3PrmNmxUWgYqO7EFSHEg">
+</div>
+<div class="flex flex-col justify-between py-1">
+<div>
+<span class="text-label-md font-label-md text-primary mb-1 block">AI Trends</span>
+<h3 class="text-title-md font-title-md text-on-surface line-clamp-2 group-hover:text-primary transition-colors">The Future of Generative AI in 2024</h3>
+</div>
+<span class="text-label-md font-label-md text-on-surface-variant">Oct 24 • 5 min read</span>
+</div>
+</div>
+<!-- Article 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-[0px_1px_3px_rgba(0,0,0,0.05),_0px_10px_15px_-3px_rgba(0,0,0,0.05)] flex gap-4 cursor-pointer group">
+<div class="w-24 h-24 rounded-xl bg-surface-variant flex-shrink-0 overflow-hidden">
+<img alt="Tech Article" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUBp7ONIBeiKGBvDTTWDCnxnipjNi2NbeU4rW6i-QGW64V9DTZs7XCymSQP67YpteZQFA_AvKx4JUeBCEpVGF5aH0D6-A2qG2U7GKyDXRzDdSdBelGCHEVdUdqK-QaH_x2RDZpQhKFEX02ho3ijlpovrvmMGfyGiwE5J7D3j8F9mHz_t1ah4WUQI-xlHTPh_fikCiSUWTG3I5m1VcUErw_eD-36Jl6ueyCE62uXhTh6HDy46XGErFmwg">
+</div>
+<div class="flex flex-col justify-between py-1">
+<div>
+<span class="text-label-md font-label-md text-secondary mb-1 block">Development</span>
+<h3 class="text-title-md font-title-md text-on-surface line-clamp-2 group-hover:text-secondary transition-colors">Best Practices for Modern Web Apps</h3>
+</div>
+<span class="text-label-md font-label-md text-on-surface-variant">Oct 22 • 8 min read</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Portals Section -->
+<section class="px-margin-mobile mb-4">
+<div class="flex justify-between items-end mb-4">
+<h2 class="text-headline-md font-headline-md text-on-surface">Community Portals</h2>
+</div>
+<div class="grid grid-cols-1 gap-4">
+<!-- Portal 1 -->
+<div class="bg-gradient-to-r from-surface-container to-surface-container-high rounded-xl p-5 border border-surface-variant flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">forum</span>
+</div>
+<div>
+<h3 class="text-title-md font-title-md text-on-surface">Developer Forum</h3>
+<p class="text-body-md text-on-surface-variant">Connect with other builders</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">arrow_forward</span>
+</div>
+<!-- Portal 2 -->
+<div class="bg-gradient-to-r from-surface-container to-surface-container-high rounded-xl p-5 border border-surface-variant flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">school</span>
+</div>
+<div>
+<h3 class="text-title-md font-title-md text-on-surface">Learning Hub</h3>
+<p class="text-body-md text-on-surface-variant">Tutorials and documentation</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-secondary transition-colors">arrow_forward</span>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-2 pb-safe-bottom h-[72px] bg-surface/90 dark:bg-surface-container/90 backdrop-blur-xl shadow-[0px_-1px_3px_rgba(0,0,0,0.05)] md:hidden">
+<!-- Home (Active) -->
+<a class="flex flex-col items-center justify-center text-primary dark:text-tertiary-fixed-dim bg-primary-container/20 dark:bg-tertiary-container/30 rounded-xl px-4 py-1.5 transition-all scale-95 group" href="#">
+<span class="material-symbols-outlined text-2xl mb-1 group-hover:opacity-80" data-icon="home" data-weight="fill" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-label-md font-label-md group-hover:opacity-80">Home</span>
+</a>
+<!-- Tools -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-4 py-1.5 hover:opacity-80 group" href="#">
+<span class="material-symbols-outlined text-2xl mb-1" data-icon="build_circle">build_circle</span>
+<span class="text-label-md font-label-md">Tools</span>
+</a>
+<!-- Explore -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-4 py-1.5 hover:opacity-80 group" href="#">
+<span class="material-symbols-outlined text-2xl mb-1" data-icon="explore">explore</span>
+<span class="text-label-md font-label-md">Explore</span>
+</a>
+<!-- Blogs -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-4 py-1.5 hover:opacity-80 group" href="#">
+<span class="material-symbols-outlined text-2xl mb-1" data-icon="article">article</span>
+<span class="text-label-md font-label-md">Blogs</span>
+</a>
+<!-- Profile -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-4 py-1.5 hover:opacity-80 group" href="#">
+<span class="material-symbols-outlined text-2xl mb-1" data-icon="account_circle">account_circle</span>
+<span class="text-label-md font-label-md">Profile</span>
+</a>
+</nav>
+
+
+</body></html>
